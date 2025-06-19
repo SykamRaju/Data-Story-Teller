@@ -14,7 +14,10 @@ uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
 else:
-    df = pd.read_csv("data/startup_funding.csv")
+    # Always use the full path relative to this file
+    current_dir = os.path.dirname(__file__)  # this gives path to app/
+    csv_path = os.path.join(current_dir, "data", "startup_funding.csv")
+    df = pd.read_csv(csv_path)
 
 df.columns = df.columns.str.strip()
 
