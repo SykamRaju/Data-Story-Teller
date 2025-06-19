@@ -1,6 +1,5 @@
 import openai
 import os
-import pandas as pd
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -14,12 +13,15 @@ def generate_story(df):
     Top investors: {df['InvestorsName'].value_counts().head(3).to_dict()}
     Most common funding types: {df['InvestmentType'].value_counts().head(3).to_dict()}
 
-    Write 3-5 sentences summarizing this data in natural, business-friendly English.
+    Write 3–5 sentences summarizing this data in natural, business-friendly English.
     """
 
-    response = openai.ChatCompletion.create(
+    response = openai.ChatCompletion.create(     # ✅ Not Completion.create
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
         temperature=0.6
     )
+
     return response.choices[0].message['content']
