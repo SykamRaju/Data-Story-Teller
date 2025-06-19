@@ -16,6 +16,9 @@ if uploaded_file:
 else:
     df = pd.read_csv("data/StartupFunding.csv")
 
+df.columns = df.columns.str.strip()
+st.write("Column names:", df.columns.tolist())
+
 st.subheader("🔍 Data Preview")
 st.dataframe(df.head())
 
