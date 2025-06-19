@@ -17,7 +17,6 @@ else:
     df = pd.read_csv("data/startup_funding.csv")
 
 df.columns = df.columns.str.strip()
-st.write("Column names:", df.columns.tolist())
 
 st.subheader("🔍 Data Preview")
 st.dataframe(df.head())
