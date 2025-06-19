@@ -1,32 +1,35 @@
-# data-storyteller-app
+# 🌐 Data Story Teller – AI-Powered Business Insight Generator
 
-Data Story Teller App
+This Streamlit app analyzes Indian startup funding data and automatically generates beautiful charts and GPT-3.5-powered business summaries.
 
-# 🌐 Automated Data Storyteller (Indian Startup Funding)
+![GitHub stars](https://img.shields.io/github/stars/SykamRaju/Data-Story-Teller?style=social)
+![Last commit](https://img.shields.io/github/last-commit/SykamRaju/Data-Story-Teller)
+![License](https://img.shields.io/github/license/SykamRaju/Data-Story-Teller)
 
-A Streamlit app that automatically analyzes startup funding data and generates visual summaries and GPT-powered business insights.
+---
 
-## ✨ Features
+## 🚀 Features
 
-- Upload your own CSV or use built-in sample
-- Auto-generate data previews, charts
-- Business-friendly insights powered by GPT-3.5
+- Upload your own CSV or use the sample dataset
+- Automatic charts for:
+  - Top cities
+  - Popular sectors
+- Business insight generation using GPT-3.5
+- Clean UI built with Streamlit + Plotly
 
-## 🎓 How to Run
+---
+
+## 🧪 Demo Screenshot
+
+![screenshot](https://github.com/SykamRaju/Data-Story-Teller/assets/your-screenshot.png)
+
+---
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/SykamRaju/Data-Story-Teller.git
+cd Data-Story-Teller
 pip install -r requirements.txt
 streamlit run app/main.py
 ```
-
-## 🌐 Live Demo (Coming Soon)
-
-[https://story.raju.ai](https://story.raju.ai)
-
-## 🌟 License
-
-MIT - Free to use and modify
-
-## 🧳 Built by [Raju Sykam](https://github.com/SykamRaju)
-
----
