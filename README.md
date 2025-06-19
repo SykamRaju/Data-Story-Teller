@@ -1,35 +1,45 @@
-# 🌐 Data Story Teller – AI-Powered Business Insight Generator
+# 🧠 Data Story Teller
 
-This Streamlit app analyzes Indian startup funding data and automatically generates beautiful charts and GPT-3.5-powered business summaries.
+A Streamlit-powered AI application that turns raw data into insightful business stories using GPT.
 
-![GitHub stars](https://img.shields.io/github/stars/SykamRaju/Data-Story-Teller?style=social)
-![Last commit](https://img.shields.io/github/last-commit/SykamRaju/Data-Story-Teller)
-![License](https://img.shields.io/github/license/SykamRaju/Data-Story-Teller)
+![demo](https://raw.githubusercontent.com/SykamRaju/Data-Story-Teller/refs/heads/main/app/static/demo.png)
 
----
+## 🌟 Features
 
-## 🚀 Features
+- 📊 Upload a dataset (CSV)
+- 🤖 Auto-generate insights using GPT-3.5
+- 🧮 Uses real startup funding data from India
+- ⚙️ Hosted live using Streamlit Cloud
+- 🔐 Uses OpenAI API via secret key
+- 💡 Ready for portfolio and LinkedIn showcase
 
-- Upload your own CSV or use the sample dataset
-- Automatic charts for:
-  - Top cities
-  - Popular sectors
-- Business insight generation using GPT-3.5
-- Clean UI built with Streamlit + Plotly
+## 🚀 Live Demo
 
----
+👉 [data-story-teller.streamlit.app](https://data-story-teller.streamlit.app)
 
-## 🧪 Demo Screenshot
+## 🧰 Tech Stack
 
-![screenshot](https://github.com/SykamRaju/Data-Story-Teller/assets/your-screenshot.png)
+- Python 3.10
+- Streamlit
+- Pandas
+- OpenAI GPT-3.5 API
 
----
-
-## 📦 Installation
+## 💻 Local Setup
 
 ```bash
 git clone https://github.com/SykamRaju/Data-Story-Teller.git
 cd Data-Story-Teller
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Set your OpenAI API key in .env (optional for local)
+echo OPENAI_API_KEY=your_key > .env
+
+# Run the app
 streamlit run app/main.py
 ```
