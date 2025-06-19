@@ -14,7 +14,7 @@ uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
 else:
-    df = pd.read_csv("data/StartupFunding.csv")
+    df = pd.read_csv("data/startup_funding.csv")
 
 df.columns = df.columns.str.strip()
 st.write("Column names:", df.columns.tolist())
