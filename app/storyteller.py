@@ -1,9 +1,9 @@
-import openai
+from openai import OpenAI
 import os
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
 def generate_story(df):
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
     prompt = f"""
     You are a data analyst. Given this summary of a dataset, write a short business insight report:
 
@@ -16,10 +16,10 @@ def generate_story(df):
     Write 3–5 sentences summarizing this data in natural, business-friendly English.
     """
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.6
     )
 
-    return response.choices[0].message['content']
+    return response.choices[0].message.content
